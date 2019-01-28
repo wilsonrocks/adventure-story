@@ -6,6 +6,10 @@ class Rule {
   description = () => {
     return [];
   }
+
+  outcome = () => {
+    return {};
+  }
 }
 
 export default Rule;
