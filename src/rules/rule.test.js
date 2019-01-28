@@ -11,4 +11,11 @@ describe('Rule', () => {
       expect(isAvailable).toBeInstanceOf(Function);
     });
   });
+  describe('.description()', () => {
+    it('is a method', () => {
+      const { description } = new Rule();
+      expect(description).toBeDefined();
+      expect(description).toBeInstanceOf(Function);
+    });
+  });
 });

@@ -1,5 +1,8 @@
 class Rule {
   isAvailable = () => {
+  }
+
+  description = () => {
 
   }
 }
