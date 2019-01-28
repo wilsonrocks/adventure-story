@@ -1,9 +1,10 @@
 class Rule {
   isAvailable = () => {
+    return true;
   }
 
   description = () => {
-
+    return [];
   }
 }
 
