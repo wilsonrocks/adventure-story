@@ -1,16 +1,54 @@
 export const gameStateSchema = {
   properties: {
-    name: {
-      type: 'string',
-      minLength: 1,
+    gameState: {
+      type: 'object',
+      properties: {
+        character: {
+          type: 'object',
+          properties: {
+            name: {
+              type: 'string',
+              minLength: 1,
+            },
+            inventory: {
+              type: 'array',
+              items: {
+                type: 'string',
+              },
+            },
+          },
+        },
+        location: {
+          type: 'object',
+          properties: {
+            foe: {
+              type: 'object'
+            },
+            exits: {
+              type: 'array',
+              items: {
+                type: 'string',
+              },
+            },
+            items: {
+              type: 'array',
+              items: {
+                type: 'string',
+              },
+            },
+          },
+        },
+      },
     },
-    gameStatus: {
-      type: 'string',
-      enum: ['inProgress', 'won', 'lost'],
+    meta: {
+      type: 'object',
+      properties: {
+        gameStatus: {
+          type: 'string',
+          enum: ['inProgress', 'won', 'lost', 'wantsToQuit', 'quit'],
+        },
+      },
     },
-    inventory: {
-      type: 'array',
-    }
   },
-  required: ['name', 'gameStatus', 'inventory'],
+  required: ['gameState', 'meta'],
 };
