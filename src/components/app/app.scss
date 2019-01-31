@@ -1,0 +1,46 @@
+body {
+  background: grey;
+}
+
+.app-grid {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  height: 95vh;
+  width: 95vw;
+  font-size: 20pt;
+  > * {
+    background: black;
+  }
+  color: white;
+  margin: auto;
+}
+
+.logo {
+  grid-area: 1/1/1/1;
+}
+
+.character {
+  grid-area: 2/1/8/2;
+}
+
+.story {
+  grid-area: 1/2/6/7;
+}
+
+.choices {
+  grid-area: 6/2/8/7;
+}
+
+.stats {
+  grid-area: 1/7/2/8;
+}
+
+.unknown1 {
+  grid-area: 2/7/5/8;
+}
+
+.unknown2 {
+  grid-area: 5/7/8/8;
+}
