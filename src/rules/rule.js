@@ -7,8 +7,8 @@ class Rule {
     return [];
   }
 
-  outcome = () => {
-    return {};
+  outcome = gameState => {
+    return gameState;
   }
 }
 

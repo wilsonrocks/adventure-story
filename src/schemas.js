@@ -17,6 +17,7 @@ export const gameStateSchema = {
               },
             },
           },
+          required: ['name', 'inventory'],
         },
         location: {
           type: 'object',
@@ -37,8 +38,10 @@ export const gameStateSchema = {
               },
             },
           },
+          required: ['foe', 'exits', 'items'],
         },
       },
+      required: ['character', 'location'],
     },
     meta: {
       type: 'object',
@@ -48,6 +51,7 @@ export const gameStateSchema = {
           enum: ['inProgress', 'won', 'lost', 'wantsToQuit', 'quit'],
         },
       },
+      required: ['gameStatus'],
     },
   },
   required: ['gameState', 'meta'],

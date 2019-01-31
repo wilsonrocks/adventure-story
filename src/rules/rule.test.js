@@ -3,6 +3,23 @@ import { gameStateSchema } from '../schemas';
 import { matchers } from 'jest-json-schema';
 expect.extend(matchers);
 
+const testGameState = {
+  gameState: {
+    character: {
+      name: 'Brad',
+      inventory: [],
+    },
+    location: {
+      foe: {},
+      exits: [],
+      items: [],
+    },
+  },
+  meta: {
+    gameStatus: 'inProgress',
+  },
+};
+
 describe('Rule', () => {
   it('is a class', () => {
     expect(() => new Rule()).not.toThrow();
@@ -15,7 +32,7 @@ describe('Rule', () => {
     });
     it('returns a boolean', () => {
       const { isAvailable } = new Rule();
-      expect(typeof isAvailable()).toBe('boolean');
+      expect(typeof isAvailable(testGameState)).toBe('boolean');
     });
   });
   describe('.description()', () => {
@@ -26,8 +43,9 @@ describe('Rule', () => {
     });
     it('returns an array of strings', () => {
       const { description } = new Rule();
-      expect(description({})).toBeInstanceOf(Array);
-      description({}).forEach(x => expect(x).toBeInstanceOf(String));
+      const output = description(testGameState);
+      expect(output).toBeInstanceOf(Array);
+      output.forEach(x => expect(x).toBeInstanceOf(String));
     });
   });
   describe('.outcome()', () => {
@@ -38,8 +56,7 @@ describe('Rule', () => {
     });
     it('returns a game state object', () => {
       const { outcome } = new Rule();
-      expect(outcome({})).toBeInstanceOf(Object);
-      expect(outcome({})).toMatchSchema(gameStateSchema);
+      expect(outcome(testGameState)).toMatchSchema(gameStateSchema);
     });
   });
 });
