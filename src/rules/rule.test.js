@@ -1,10 +1,10 @@
 import Rule from "./rule";
-import { gameStateSchema } from '../schemas';
+import { stateSchema } from '../schemas';
 import { matchers } from 'jest-json-schema';
 expect.extend(matchers);
 
 const testGameState = {
-  gameState: {
+  game: {
     character: {
       name: 'Brad',
       inventory: [],
@@ -56,7 +56,7 @@ describe('Rule', () => {
     });
     it('returns a game state object', () => {
       const { outcome } = new Rule();
-      expect(outcome(testGameState)).toMatchSchema(gameStateSchema);
+      expect(outcome(testGameState)).toMatchSchema(stateSchema);
     });
   });
 });
