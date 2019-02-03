@@ -1,9 +1,7 @@
 import { stateSchema } from '../schema/schemas';
-import { matchers } from 'jest-json-schema';
 import testStates from '../schema/examples';
+import { matchers } from 'jest-json-schema';
 expect.extend(matchers);
-
-
 
 const testRule = rule => {
   testStates.forEach(testState => {
