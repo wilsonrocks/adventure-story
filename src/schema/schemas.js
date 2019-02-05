@@ -19,7 +19,7 @@ export const locationSchema = {
   type: 'object',
   properties: {
     foe: {
-      type: 'object'
+      type: 'object',
     },
     exits: {
       type: 'array',
