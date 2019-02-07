@@ -1,11 +1,11 @@
 import Rule from '../rule';
 
 class Slap extends Rule {
-  isAvailable = () => true
+  isAvailable = () => true;
 
   description = () => []
 
-  outcome = gameState => gameState
+  outcome = gameState => gameState;
 }
 
 export default Slap;
