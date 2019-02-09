@@ -1,0 +1,10 @@
+#!/bin/bash
+# this opens a new tmux session and runs the dev server, tests and gives you a terminal pane
+# it will go wrong if you don't have tmux installed
+tmux new-session \; \
+rename-session Story \; \
+send-keys 'BROWSER=none npm run start' C-m \; \
+split-window -h -p 66 \; \
+send-keys 'npm run test' C-m \; \
+split-window -h
+
