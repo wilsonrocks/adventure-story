@@ -1,5 +1,5 @@
 import { matchers } from 'jest-json-schema';
-import { stateSchema } from '../schema/schemas';
+import schema from '../schema/schema';
 import testStates from '../schema/examples';
 
 expect.extend(matchers);
@@ -42,7 +42,7 @@ const testRule = (Rule) => {
         });
         it('returns a game state object', () => {
           const { outcome } = new Rule();
-          expect(outcome(testState)).toMatchSchema(stateSchema);
+          expect(outcome(testState)).toMatchSchema(schema);
         });
       });
     });

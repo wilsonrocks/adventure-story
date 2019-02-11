@@ -1,18 +1,12 @@
-const testGameState = {
-  game: {
-    character: {
-      name: 'Brad',
-      inventory: [],
-    },
-    location: {
-      foe: {},
-      exits: [],
-      items: [],
-    },
-  },
-  meta: {
-    gameStatus: 'inProgress',
-  },
+const justAnOrc = {
+  characterName: 'Brad',
+  characterInventory: [],
+  foeKind: 'orc',
+  exits: [],
+  loot: [],
+  gameStatus: 'inProgress',
 };
 
-export default [testGameState];
+export default [
+  justAnOrc,
+];
