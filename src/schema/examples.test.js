@@ -6,6 +6,6 @@ expect.extend(matchers);
 
 describe('Schema Examples', () => {
   testStates.forEach((testState) => {
-    it('is a valid state', () => expect(testState).toMatchSchema(schema));
+    it(`${testState.characterName} is a valid state`, () => expect(testState).toMatchSchema(schema));
   });
 });

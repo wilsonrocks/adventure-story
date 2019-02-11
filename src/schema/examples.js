@@ -1,5 +1,5 @@
 const justAnOrc = {
-  characterName: 'Brad',
+  characterName: 'justAnOrc',
   characterInventory: [],
   foeKind: 'orc',
   exits: [],
@@ -7,6 +7,16 @@ const justAnOrc = {
   gameStatus: 'inProgress',
 };
 
+const orcWithLoot = {
+  characterName: 'orcWithLoot',
+  characterInventory: [],
+  foeKind: 'orc',
+  exits: [],
+  loot: ['potion', 'mace'],
+  gameStatus: 'inProgress',
+};
+
 export default [
   justAnOrc,
+  orcWithLoot,
 ];
