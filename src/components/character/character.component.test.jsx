@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Character from './character.component';
+import examples from '../../schema/examples';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Character />, div);
-  ReactDOM.unmountComponentAtNode(div);
+
+examples.forEach((example) => {
+  it(`renders without crashing with ${example.characterName}`, () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<Character fullState={example} />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
 });

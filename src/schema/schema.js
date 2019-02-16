@@ -1,21 +1,16 @@
-const characterProperties = {
-  characterName: {
-    type: 'string',
-    minLength: 1,
-  },
-  characterInventory: {
-    type: 'array',
-    items: {
-      type: 'string',
-    },
-  },
-};
-
-
 const fullSchema = {
   type: 'object',
   properties: {
-    ...characterProperties,
+    characterName: {
+      type: 'string',
+      minLength: 1,
+    },
+    characterInventory: {
+      type: 'array',
+      items: {
+        type: 'string',
+      },
+    },
     foeKind: {
       type: 'string',
       enum: ['orc', 'giraffe'],
@@ -49,5 +44,4 @@ const fullSchema = {
 
 export {
   fullSchema,
-  characterProperties,
 };

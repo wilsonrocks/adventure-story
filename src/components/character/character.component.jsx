@@ -1,15 +1,15 @@
 import React from 'react';
 import matchSchema from '../../schema/schemaPropType';
-import { characterProperties } from '../../schema/schema';
+import { fullSchema } from '../../schema/schema';
 
-const Character = ({ characterState }) => (
+const Character = ({ fullState }) => (
   <div className="character">
-    {JSON.stringify(characterState)}
+    {JSON.stringify(fullState)}
   </div>
 );
 
 Character.propTypes = {
-  characterState: matchSchema(characterProperties).isRequired,
+  fullState: matchSchema(fullSchema).isRequired,
 };
 
 export default Character;

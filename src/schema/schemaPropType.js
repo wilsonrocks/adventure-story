@@ -3,6 +3,7 @@ import Ajv from 'ajv';
 function matchSchema(schema) {
   const ajv = new Ajv({ allErrors: true });
   const validate = ajv.compile(schema);
+
   const schemaChecker = (props, propName, componentName) => {
     if (!validate(props[propName])) {
       const errorString = validate.errors
