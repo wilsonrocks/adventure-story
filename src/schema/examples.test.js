@@ -1,6 +1,6 @@
 import { matchers } from 'jest-json-schema';
 import testStates from './examples';
-import { fullSchema } from './schema';
+import fullSchema from './schema';
 
 expect.extend(matchers);
 

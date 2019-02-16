@@ -1,6 +1,6 @@
 import React from 'react';
 import matchSchema from '../../schema/schemaPropType';
-import { fullSchema } from '../../schema/schema';
+import fullSchema from '../../schema/schema';
 
 const Character = ({ fullState }) => (
   <div className="character">

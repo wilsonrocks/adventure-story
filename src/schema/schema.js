@@ -42,6 +42,4 @@ const fullSchema = {
   ],
 };
 
-export {
-  fullSchema,
-};
+export default fullSchema;
