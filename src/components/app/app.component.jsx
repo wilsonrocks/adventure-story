@@ -5,7 +5,7 @@ import './app.scss';
 const App = () => (
   <div className="app-grid">
     <div className="logo">LOGO</div>
-    <Character />
+    <Character gameState={{}} />
     <div className="story">STORY</div>
     <div className="choices">CHOICES</div>
     <div className="stats">STATS</div>
