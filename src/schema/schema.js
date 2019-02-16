@@ -11,6 +11,10 @@ const fullSchema = {
         type: 'string',
       },
     },
+    characterRace: {
+      type: 'string',
+      enum: ['human', 'dwarf', 'elf'],
+    },
     foeKind: {
       type: 'string',
       enum: ['orc', 'giraffe'],
@@ -35,6 +39,7 @@ const fullSchema = {
   required: [
     'characterName',
     'characterInventory',
+    'characterRace',
     'foeKind',
     'exits',
     'loot',

@@ -2,9 +2,26 @@ import React from 'react';
 import matchSchema from '../../schema/schemaPropType';
 import fullSchema from '../../schema/schema';
 
-const Character = ({ fullState }) => (
+const Character = ({
+  fullState: {
+    characterName,
+    characterInventory,
+    characterRace,
+  },
+}) => (
   <div className="character">
-    {JSON.stringify(fullState)}
+    <h2>{characterName}</h2>
+    <p>
+      You are an
+      {' '}
+      {characterRace}
+      .
+    </p>
+    <p>
+      You are carrying:
+      {' '}
+      {characterInventory.join(', ')}
+    </p>
   </div>
 );
 
