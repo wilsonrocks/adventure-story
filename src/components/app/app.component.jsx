@@ -1,14 +1,14 @@
 import React from 'react';
 import Character from '../character';
-
-import examples from '../../schema/examples';
+import matchSchema from '../../schema/schemaPropType';
+import fullSchema from '../../schema/schema';
 
 import './app.scss';
 
-const App = () => (
+const App = ({ fullState }) => (
   <div className="app-grid">
     <div className="logo">LOGO</div>
-    <Character fullState={examples[2]} />
+    <Character fullState={fullState} />
     <div className="story">STORY</div>
     <div className="choices">CHOICES</div>
     <div className="stats">STATS</div>
@@ -16,5 +16,9 @@ const App = () => (
     <div className="unknown2">UNKNOWN2</div>
   </div>
 );
+
+App.propTypes = {
+  fullState: matchSchema(fullSchema).isRequired,
+};
 
 export default App;

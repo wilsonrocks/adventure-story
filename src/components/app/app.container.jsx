@@ -1,9 +1,20 @@
 import React from 'react';
 import AppComponent from './app.component';
+import startUpState from '../../schema/startUpState';
+
 
 class App extends React.Component {
+  state = {
+    fullState: startUpState,
+  }
+
   render() {
-    return <AppComponent />;
+    const { fullState } = this.state;
+    return (
+      <AppComponent
+        fullState={fullState}
+      />
+    );
   }
 }
 
