@@ -1,7 +1,11 @@
-import validRules from './validRules';
+import Rule from './rule';
+import allRules from './allRules';
 
-describe('validRules', () => {
-  it('is a function', () => {
-    expect(typeof validRules).toBe('function');
+describe('allRules', () => {
+  it('is an array of rules', () => {
+    expect(Array.isArray(allRules)).toBe(true);
+    allRules.forEach((RuleToTest) => {
+      expect(new RuleToTest()).toBeInstanceOf(Rule);
+    });
   });
 });
