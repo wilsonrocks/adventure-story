@@ -1,9 +1,9 @@
 import Rule from '../rule';
 
 class Slap extends Rule {
-  isAvailable = () => true;
+  isAvailable = ({ foeKind }) => Boolean(foeKind);
 
-  description = () => []
+  description = ({ foeKind }) => `Slap the ${foeKind}`;
 
   outcome = gameState => gameState;
 }

@@ -27,11 +27,10 @@ const testRule = (Rule) => {
           expect(description).toBeDefined();
           expect(description).toBeInstanceOf(Function);
         });
-        it('returns an array of strings', () => {
+        it('returns a string', () => {
           const { description } = new Rule();
           const output = description(testState);
-          expect(output).toBeInstanceOf(Array);
-          output.forEach(x => expect(x).toBeInstanceOf(String));
+          expect(typeof output).toBe('string');
         });
       });
       describe('.outcome()', () => {
