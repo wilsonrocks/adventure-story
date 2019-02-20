@@ -1,6 +1,7 @@
 import React from 'react';
 import Character from '../character';
 import Choices from '../choices';
+import Story from '../story';
 
 import matchSchema from '../../schema/schemaPropType';
 import fullSchema from '../../schema/schema';
@@ -11,7 +12,7 @@ const App = ({ fullState }) => (
   <div className="app-grid">
     <div className="logo">LOGO</div>
     <Character fullState={fullState} />
-    <div className="story">STORY</div>
+    <Story fullState={fullState} />
     <Choices fullState={fullState} />
   </div>
 );

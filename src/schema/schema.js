@@ -35,6 +35,12 @@ const fullSchema = {
       type: 'string',
       enum: ['inProgress', 'won', 'lost', 'wantsToQuit', 'quit'],
     },
+    story: {
+      type: 'array',
+      items: {
+        type: 'string',
+      },
+    },
   },
   required: [
     'characterName',
@@ -44,6 +50,7 @@ const fullSchema = {
     'exits',
     'loot',
     'gameStatus',
+    'story',
   ],
 };
 

@@ -6,6 +6,7 @@ const justAnOrc = {
   exits: [],
   loot: [],
   gameStatus: 'inProgress',
+  story: [],
 };
 
 const elfWithLoot = {
@@ -16,6 +17,7 @@ const elfWithLoot = {
   exits: [],
   loot: ['potion', 'mace'],
   gameStatus: 'inProgress',
+  story: [],
 };
 
 const jimWithDaggerAndPotion = {
@@ -26,6 +28,7 @@ const jimWithDaggerAndPotion = {
   exits: [],
   loot: ['potion', 'mace'],
   gameStatus: 'inProgress',
+  story: [],
 };
 
 export default [
