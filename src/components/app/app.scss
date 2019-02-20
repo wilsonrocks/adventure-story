@@ -1,8 +1,12 @@
 .app-grid {
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-areas:
+    "logo      story"
+    "character story"
+    "character choices";
   height: 95vh;
   width: 95vw;
   font-size: 20pt;
@@ -17,29 +21,17 @@
 }
 
 .logo {
-  grid-area: 1/1/1/1;
+  grid-area: logo;
 }
 
 .character {
-  grid-area: 2/1/8/2;
+  grid-area: character;
 }
 
 .story {
-  grid-area: 1/2/6/7;
+  grid-area: story;
 }
 
 .choices {
-  grid-area: 6/2/8/7;
-}
-
-.stats {
-  grid-area: 1/7/2/8;
-}
-
-.unknown1 {
-  grid-area: 2/7/5/8;
-}
-
-.unknown2 {
-  grid-area: 5/7/8/8;
+  grid-area: choices;
 }

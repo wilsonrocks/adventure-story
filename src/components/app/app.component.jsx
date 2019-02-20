@@ -13,9 +13,6 @@ const App = ({ fullState }) => (
     <Character fullState={fullState} />
     <div className="story">STORY</div>
     <Choices fullState={fullState} />
-    <div className="stats">STATS</div>
-    <div className="unknown1">UNKNOWN1</div>
-    <div className="unknown2">UNKNOWN2</div>
   </div>
 );
 
