@@ -5,7 +5,15 @@ class Slap extends Rule {
 
   description = ({ foeKind }) => `Slap the ${foeKind}`;
 
-  outcome = gameState => gameState;
+  outcome = (gameState) => {
+    const { story, foeKind } = gameState;
+    const newState = {
+      ...gameState,
+      story: [...story, `You slap the ${foeKind}. It dies.`],
+      foeKind: null,
+    };
+    return newState;
+  }
 }
 
 export default Slap;

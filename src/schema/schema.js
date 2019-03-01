@@ -27,8 +27,7 @@ const fullSchema = {
       type: 'object',
       properties: {
         foeKind: {
-          type: 'string',
-          enum: ['orc', 'giraffe'],
+          enum: [null, 'orc', 'giraffe'],
         },
         exits: {
           type: 'array',
@@ -43,7 +42,6 @@ const fullSchema = {
           },
         },
         gameStatus: {
-          type: 'string',
           enum: ['inProgress', 'won', 'lost', 'wantsToQuit', 'quit'],
         },
         story: {
@@ -75,3 +73,5 @@ const fullSchema = {
 };
 
 export default fullSchema;
+
+export const characterSchema = fullSchema.definitions.character;
