@@ -13,6 +13,7 @@ class App extends React.Component {
     return (
       <AppComponent
         fullState={fullState}
+        setGameState={(...args) => this.setState(...args)}
       />
     );
   }
