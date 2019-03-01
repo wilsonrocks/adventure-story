@@ -1,9 +1,9 @@
 import React from 'react';
 import matchSchema from '../../schema/schemaPropType';
-import fullSchema from '../../schema/schema';
+import { characterSchema } from '../../schema/schema';
 
 const Character = ({
-  fullState: {
+  characterState: {
     characterName,
     characterInventory,
     characterRace,
@@ -26,7 +26,7 @@ const Character = ({
 );
 
 Character.propTypes = {
-  fullState: matchSchema(fullSchema).isRequired,
+  characterState: matchSchema(characterSchema).isRequired,
 };
 
 export default Character;

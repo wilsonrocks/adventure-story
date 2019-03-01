@@ -11,7 +11,7 @@ import './app.scss';
 const App = ({ fullState }) => (
   <div className="app-grid">
     <div className="logo">LOGO</div>
-    <Character fullState={fullState} />
+    <Character characterState={fullState} />
     <Story fullState={fullState} />
     <Choices fullState={fullState} />
   </div>
