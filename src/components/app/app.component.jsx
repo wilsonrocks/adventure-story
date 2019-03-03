@@ -13,12 +13,18 @@ const App = ({
   fullState,
   setGameState,
   toggleShowing,
-  showingStats,
+  showingCharacter,
 }) => (
   <div className="app-grid">
-    <button type="button" onClick={toggleShowing}>{showingStats ? 'stats' : 'story' }</button>
-    <Character characterState={fullState} />
-    <Story fullState={fullState} />
+    <button
+      type="button"
+      onClick={toggleShowing}
+      className="toggle-stats"
+    >
+      {showingCharacter ? 'character' : 'story' }
+    </button>
+    <Character characterState={fullState} hide={!showingCharacter} />
+    <Story fullState={fullState} hide={showingCharacter} />
     <Choices fullState={fullState} setGameState={setGameState} />
   </div>
 );
@@ -27,7 +33,7 @@ App.propTypes = {
   fullState: matchSchema(fullSchema).isRequired,
   setGameState: PropTypes.func.isRequired,
   toggleShowing: PropTypes.func.isRequired,
-  showingStats: PropTypes.bool.isRequired,
+  showingCharacter: PropTypes.bool.isRequired,
 };
 
 export default App;

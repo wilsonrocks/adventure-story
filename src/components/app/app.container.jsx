@@ -9,23 +9,23 @@ class App extends React.Component {
   state = {
     fullState: startUpState,
     ui: {
-      showingStats: false,
+      showingCharacter: false,
     },
   }
 
   toggleShowing = () => {
-    const { ui: { showingStats } } = this.state;
-    const newState = deepmerge(this.state, { ui: { showingStats: !showingStats } });
+    const { ui: { showingCharacter } } = this.state;
+    const newState = deepmerge(this.state, { ui: { showingCharacter: !showingCharacter } });
     return this.setState(newState);
   }
 
   render() {
-    const { fullState, ui: { showingStats } } = this.state;
+    const { fullState, ui: { showingCharacter } } = this.state;
     return (
       <AppComponent
         fullState={fullState}
         setGameState={(...args) => this.setState(...args)}
-        showingStats={showingStats}
+        showingCharacter={showingCharacter}
         toggleShowing={this.toggleShowing}
       />
     );
