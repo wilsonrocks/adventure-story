@@ -7,6 +7,7 @@ import fullSchema from '../../schema/schema';
 
 const Story = ({ fullState: { story }, hide }) => (
   <div className={classnames('story', { hide })}>
+    <h2>The Story</h2>
     {story.map((str, index) => <p key={index}>{str}</p>)}
   </div>
 );

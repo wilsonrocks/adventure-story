@@ -1,13 +1,13 @@
-.app-grid {
+$breakpoint: 768px;
 
+@media (max-width: $breakpoint) {
+  .hide {
+    display: none;
+  }
 }
 
-.hide {
-  display: none;
-}
-
+@media (min-width: $breakpoint) {
 .toggle-stats {
-  @media (min-width: 768px) {
     display: none;
   }
 }
