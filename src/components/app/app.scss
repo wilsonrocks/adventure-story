@@ -7,7 +7,31 @@ $breakpoint: 768px;
 }
 
 @media (min-width: $breakpoint) {
-.toggle-stats {
+  .toggle-stats {
     display: none;
   }
+}
+
+.app-grid {
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-gap: 5px;
+  justify-content: center;
+
+  @media (max-width: $breakpoint) {
+    grid-template-rows: 24px 1fr 100px;
+    grid-template-columns: 100%;
+  }
+
+  @media (min-width: $breakpoint) {
+    grid-template-columns: minmax(auto, 400px) minmax(auto, 400px);
+    grid-template-rows: 1fr max-content;
+  }
+}
+
+.choices {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, 100px);
 }

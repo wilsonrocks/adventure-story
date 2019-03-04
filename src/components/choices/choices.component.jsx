@@ -7,22 +7,18 @@ import validRules from '../../rules/validRules';
 
 const Choices = ({ fullState, setGameState }) => (
   <div className="choices">
-    <h2>Your choices</h2>
-    <ol>
-      {validRules(fullState).map((Rule, index) => {
-        const rule = new Rule();
-        return (
-          <li key={index}>
-            <button
-              type="button"
-              onClick={() => setGameState({ fullState: rule.outcome(fullState) })}
-            >
-              {rule.description(fullState)}
-            </button>
-          </li>
-        );
-      })}
-    </ol>
+    {validRules(fullState).map((Rule, index) => {
+      const rule = new Rule();
+      return (
+        <button
+          key={index}
+          type="button"
+          onClick={() => setGameState({ fullState: rule.outcome(fullState) })}
+        >
+          {rule.description(fullState)}
+        </button>
+      );
+    })}
   </div>
 );
 
