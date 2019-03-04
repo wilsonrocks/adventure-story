@@ -1,5 +1,9 @@
 $breakpoint: 768px;
 
+body {
+  margin: 0;
+}
+
 @media (max-width: $breakpoint) {
   .hide {
     display: none;
@@ -13,14 +17,16 @@ $breakpoint: 768px;
 }
 
 .app-grid {
+  padding: 5px;
   background-color: black;
   color: white;
   display: grid;
   grid-gap: 5px;
   justify-content: center;
+  height: calc(100vh - 10px);
 
   @media (max-width: $breakpoint) {
-    grid-template-rows: 24px 1fr 100px;
+    grid-template-rows: 24px 1fr max-content;
     grid-template-columns: 100%;
   }
 
